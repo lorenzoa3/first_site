@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn-icons-png.flaticon.com/512/12/12638.png">
     <title>Pets</title>
-    
+
 </head>
 <body>
     
@@ -152,7 +152,18 @@
             </ul>
         </div>    
     </main>
-   
+    <div class="footer">
+        <p>This webpage was developed as a project for SI 339 at the University of Michigan's School of Information.
+        <span class="easter-egg" onclick="revealGif()">
+        <img src="images/block_m-hex.png" width = "50" id = "clickableIcon" alt="Clickable Icon">
+        </span>
+
+        <!-- Hidden GIF container -->
+        <img src="images/goBlueGIF.gif" alt="Hidden GIF" class="hidden-gif" id="hiddenGif" width = "50"> </p>
+
+        <script src="easteregg.js"></script>
+        
+    </div>
 
 </body>
 </html>

@@ -126,6 +126,51 @@ nav a.active {
   padding-bottom: 2px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #363636;
+  color: #e8e9f3;
+  text-align: center;
+  height: 130px;
+  padding: 5px;
+}
+
+.easter-egg {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.easter-egg img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  border: none;
+  height: auto;
+  margin-top: 10px;
+  border-top-right-radius: none;
+}
+
+.hidden-gif {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  display: none;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: none;
+  border-top-right-radius: none;
+}
+
+.easter-egg img,
+.hidden-gif {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .gif {
       animation: none !important;
@@ -184,6 +229,7 @@ nav a.active {
     display: inline-block;
     margin-left: 50px;
   }
+
   @media (prefers-reduced-motion: reduce) {
     .gif {
         animation: none !important;
