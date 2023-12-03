@@ -45,7 +45,7 @@ main {
 }
 
 h1 {
-  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-family: Brush Script MT, Brush Script Std;
   font-size: 24px; /* Adjusted for mobile */
   font-style: italic;
   text-align: center;
@@ -114,16 +114,47 @@ nav a {
   font-size: 16px;
   font-weight: bold;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 nav a:hover {
-  color: #e8e9f3;
+  color: #fff; /* Change the hover color */
 }
 
 nav a.active {
   color: rgb(253, 168, 249);
   border-bottom: 2px solid rgb(253, 168, 249);
   padding-bottom: 2px;
+}
+
+/* Adding a subtle animation for hover effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(253, 168, 249); /* Change the underline color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Adding a smooth transition for the active link */
+nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Adjusting the transition speed for the active link */
+nav a.active {
+  transition: color 0.3s ease, border-bottom-color 0.3s ease, padding-bottom 0.3s ease;
 }
 
 .footer {
@@ -134,7 +165,7 @@ nav a.active {
   background-color: #363636;
   color: #e8e9f3;
   text-align: center;
-  height: 130px;
+  height: 100px;
   padding: 5px;
 }
 
@@ -149,18 +180,22 @@ nav a.active {
   border: none;
   height: auto;
   margin-top: 10px;
-  border-top-right-radius: none;
+  border-top-right-radius: 0; /* Corrected value */
+
+  padding: 0;
+  margin: 0;
 }
 
 .hidden-gif {
   width: 50px; /* Adjust the size as needed */
   height: 50px;
   display: none;
-  max-width: 100%;
   height: auto;
   margin-top: 10px;
   border: none;
-  border-top-right-radius: none;
+  border-top-right-radius: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .easter-egg img,
